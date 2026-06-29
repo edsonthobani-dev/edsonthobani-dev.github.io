@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thobani Edson — BSc IT Student at UJ. Software Developer specialising in Java, ASP.NET MVC, and Node.js." />
+  <title>Thobani Edison | Software Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Devicons (for stack icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicons/2.16.0/css/devicons.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ NAV ═══ -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">TE<span class="accent">.</span></a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Hello, world —</p>
+      <h1 class="hero__name">Thobani Edison<span class="cursor">█</span></h1>
+      <p class="hero__tagline">
+        BSc Information Technology Student <span class="accent">@UJ</span><br />
+        Building real software. Java · ASP.NET · Node.js
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero__grid-bg" aria-hidden="true"></div>
+  </section>
+
+  <!-- ═════════════════════════════════════ ABOUT ═══ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__avatar">
+          <div class="avatar-placeholder">
+            <span>TE</span>
+          </div>
+        </div>
+        <div class="about__text">
+          <p class="section__eyebrow">About Me</p>
+          <h2 class="section__title">A developer who ships.</h2>
+          <p class="about__body">
+            I'm a second-year BSc IT student at the <strong>University of Johannesburg</strong>,
+            specialising in Computer Science and Informatics — currently performing at distinction level
+            in both streams.
+          </p>
+          <p class="about__body">
+            While most students are still doing tutorials, I've shipped three full-stack projects
+            covering real-time networking, REST APIs with JWT auth, and e-commerce with EF6.
+            I'm actively targeting software development internships in the South African tech market.
+          </p>
+          <div class="about__badges">
+            <span class="badge">UJ — Academy of Computer Science</span>
+            <span class="badge">2nd Year · Distinction Level</span>
+            <span class="badge">Open to Internships 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ PROJECTS ═══ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <p class="section__eyebrow">What I've Built</p>
+      <h2 class="section__title">Projects</h2>
+      <div class="projects__grid">
+
+        <!-- ThobaPlug -->
+        <article class="project-card" data-index="01">
+          <div class="project-card__header">
+            <h3 class="project-card__title">ThobaPlug</h3>
+            <p class="project-card__type">Real-Time Chat Application</p>
+          </div>
+          <p class="project-card__desc">
+            A multi-user real-time chat application built with Java Sockets and JavaFX.
+            Features include user authentication with BCrypt password hashing, persistent
+            message history via SQL Server, and a custom JSON messaging protocol using Gson.
+          </p>
+          <ul class="project-card__highlights">
+            <li>Multi-client TCP socket architecture</li>
+            <li>BCrypt password hashing for secure auth</li>
+            <li>SQL Server integration (Windows Auth)</li>
+            <li>Custom Gson JSON protocol</li>
+          </ul>
+          <div class="project-card__stack">
+            <span class="stack-tag">Java</span>
+            <span class="stack-tag">JavaFX</span>
+            <span class="stack-tag">SQL Server</span>
+            <span class="stack-tag">Gson</span>
+            <span class="stack-tag">BCrypt</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/edsonthobani-dev/ThobaPlug" target="_blank" rel="noopener" class="card-link">GitHub →</a>
+          </div>
+        </article>
+
+        <!-- NdabaneAPI -->
+        <article class="project-card" data-index="02">
+          <div class="project-card__header">
+            <h3 class="project-card__title">NdabaneAPI</h3>
+            <p class="project-card__type">REST API with Auth & Role System</p>
+          </div>
+          <p class="project-card__desc">
+            A production-ready Node.js REST API featuring JWT authentication, role-based
+            authorization across three user types (admin, lecturer, student), an automated
+            marks and grading system, and full Swagger/OpenAPI documentation.
+          </p>
+          <ul class="project-card__highlights">
+            <li>JWT auth with role-based access control</li>
+            <li>Auto grade calculation from marks</li>
+            <li>Input validation via express-validator</li>
+            <li>Swagger/OpenAPI docs</li>
+          </ul>
+          <div class="project-card__stack">
+            <span class="stack-tag">Node.js</span>
+            <span class="stack-tag">Express</span>
+            <span class="stack-tag">JWT</span>
+            <span class="stack-tag">SQL Server</span>
+            <span class="stack-tag">Swagger</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/edsonthobani-dev/NdabaneAPI" target="_blank" rel="noopener" class="card-link">GitHub →</a>
+          </div>
+        </article>
+
+        <!-- MpangazithaBash -->
+        <article class="project-card" data-index="03">
+          <div class="project-card__header">
+            <h3 class="project-card__title">MpangazithaBash</h3>
+            <p class="project-card__type">E-Commerce Web Application</p>
+          </div>
+          <p class="project-card__desc">
+            A full-featured ASP.NET MVC 5 e-commerce store using Entity Framework 6
+            Database First. Implements the Generic Repository and Unit of Work patterns,
+            paginated product listings, a session-based shopping cart, and stored procedure
+            search functionality.
+          </p>
+          <ul class="project-card__highlights">
+            <li>Generic Repository + Unit of Work patterns</li>
+            <li>Entity Framework 6 Database First</li>
+            <li>Session-based shopping cart</li>
+            <li>Stored procedure search</li>
+          </ul>
+          <div class="project-card__stack">
+            <span class="stack-tag">ASP.NET MVC</span>
+            <span class="stack-tag">C#</span>
+            <span class="stack-tag">EF6</span>
+            <span class="stack-tag">SQL Server</span>
+            <span class="stack-tag">Bootstrap</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/edsonthobani-dev/MpangazithaBash" target="_blank" rel="noopener" class="card-link">GitHub →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ SKILLS ═══ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <p class="section__eyebrow">What I Work With</p>
+      <h2 class="section__title">Skills</h2>
+      <div class="skills__grid">
+        <div class="skill-group">
+          <h4 class="skill-group__label">Languages</h4>
+          <div class="skill-group__tags">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Visual Basic</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">HTML/CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4 class="skill-group__label">Frameworks & Libraries</h4>
+          <div class="skill-group__tags">
+            <span class="skill-tag">JavaFX</span>
+            <span class="skill-tag">ASP.NET MVC 5</span>
+            <span class="skill-tag">Entity Framework 6</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4 class="skill-group__label">Tools & Platforms</h4>
+          <div class="skill-group__tags">
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">SQL Server</span>
+            <span class="skill-tag">Swagger/OpenAPI</span>
+            <span class="skill-tag">Visual Studio</span>
+            <span class="skill-tag">IntelliJ IDEA</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4 class="skill-group__label">Concepts</h4>
+          <div class="skill-group__tags">
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">JWT Auth</span>
+            <span class="skill-tag">TCP Sockets</span>
+            <span class="skill-tag">Design Patterns</span>
+            <span class="skill-tag">OOP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ CONTACT ═══ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <p class="section__eyebrow">Let's Talk</p>
+      <h2 class="section__title">Get In Touch</h2>
+      <p class="contact__sub">
+        I'm actively looking for software development internship opportunities in South Africa.
+        If you're hiring or just want to connect — my inbox is open.
+      </p>
+      <div class="contact__links">
+        <a href="mailto:edsonthobani@gmail.com" class="btn btn--primary">Email Me</a>
+        <a href="https://github.com/edsonthobani-dev" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
+        <a href="https://linkedin.com/in/edsonthobani" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & built by <span class="accent">Thobani Edson</span> · UJ BSc IT · 2026</p>
+      <p class="footer__stack">HTML · CSS · JavaScript · GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
