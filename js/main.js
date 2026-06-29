@@ -1,9 +1,9 @@
-/* ═══════════════════════════════════════════════════════════
+/* *************************************************************
    THOBANI EDISON — PORTFOLIO
    main.js
-   ═══════════════════════════════════════════════════════════ */
+   ***************************************************************/
 
-/* ── 1. NAV SCROLL BEHAVIOUR ────────────────────────────────── */
+/* 1. NAV SCROLL BEHAVIOUR ************************** */
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-/* ── 2. MOBILE BURGER MENU ───────────────────────────────────── */
+/*  2. MOBILE BURGER MENU  */
 const burger     = document.getElementById('burger');
 const mobileMenu = document.getElementById('mobileMenu');
 const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -32,7 +32,7 @@ mobileLinks.forEach(link => {
   });
 });
 
-/* ── 3. SCROLL REVEAL ────────────────────────────────────────── */
+/*  3. SCROLL REVEAL  */
 const revealElements = document.querySelectorAll(
   '.about__grid, .project-card, .skill-group, .contact__sub, .contact__links, .section__title, .section__eyebrow'
 );
@@ -54,7 +54,7 @@ const observer = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => observer.observe(el));
 
-/* ── 4. ACTIVE NAV LINK HIGHLIGHT ───────────────────────────── */
+/*  4. ACTIVE NAV LINK HIGHLIGHT  */
 const sections  = document.querySelectorAll('section[id]');
 const navLinks  = document.querySelectorAll('.nav__links a');
 
@@ -75,14 +75,14 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(section => sectionObserver.observe(section));
 
-/* ── 5. PROJECT CARD STAGGER ─────────────────────────────────── */
+/*  5. PROJECT CARD STAGGER  */
 const cards = document.querySelectorAll('.project-card');
 
 cards.forEach((card, i) => {
   card.style.transitionDelay = `${i * 0.1}s`;
 });
 
-/* ── 6. SMOOTH SCROLL FOR ALL ANCHOR LINKS ───────────────────── */
+/*  6. SMOOTH SCROLL FOR ALL ANCHOR LINKS  */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     const target = document.querySelector(anchor.getAttribute('href'));
